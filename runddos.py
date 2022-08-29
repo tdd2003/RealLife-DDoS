@@ -16,7 +16,7 @@ parser.add_argument(
 parser.add_argument(
     "-s",
     "--sockets",
-    default=900000,
+    default=90000,
     help="Thằng Lồn Đợi Tí Đang Tạo Requests",
     type=int,
 )
@@ -202,7 +202,7 @@ def main():
                     list_of_sockets.remove(s)
 
             for _ in range(socket_count - len(list_of_sockets)):
-                logging.debug("Recreating socket...")
+                logging.debug("Đang Tạo Requests Đợi Tí Thằng Lồn")
                 try:
                     s = init_socket(ip)
                     if s:
